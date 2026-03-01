@@ -1,198 +1,202 @@
 /* PC */
-@media (min-width: 992px){
-    .mobile-header{
-        display: none;
-    }
-
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* tablet & mobile */
-@media (max-width: 991.98px){
-    /*1 an thanh navbar */
-    .navbar {
-        display: none;
-    }
-    /*2 chuyen logo vao giua */
-    .header-top{
-        position: relative;
-    }
-    .header__logo{
-        position: absolute;
-        left: 50%;
-        translate: -50% -50%;
-    }
+@media (max-width: 991.98px) {
+  /*1 an thanh navbar */
+  .navbar {
+    display: none;
+  }
+  /*2 chuyen logo vao giua */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
 
-    /*3 can lai vi tri */
-    .menu-header__icon{
-        position: absolute;
-        top: 38px;
-        left: 26px;
-        color: #fff;
-        width: 24px;
-    }
+  /*3 can lai vi tri */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: #fff;
+    width: 24px;
+  }
 
-    /* 4 overlay */
-    .menu-overlay{
-        position: fixed;
-        background: rgba(0, 0, 0, 0.3);
-        inset: 0;
-        z-index: 1;
-        /* dieu kien binh  thuong an overlay di */
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.5s;
+  /* 4 overlay */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* dieu kien binh  thuong an overlay di */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
 
-    }
+  /* 5 kiem tra neu checkbox duoc check thi hien overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
 
-    /* 5 kiem tra neu checkbox duoc check thi hien overlay */
-    .menu-checkbox:checked ~ .menu-overlay{
-        opacity: 1;
-        visibility: visible;
-    }
+  /*6 code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background-color: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
 
-    /*6 code cho menu drawer */
-    .menu-drawer{
-        position: fixed;
-        background-color: #2e1919;
-        inset:0 40% 0 0;
-        z-index: 2;
-        transform: translateX(-100%);
-        transition: 0.5s;
-        padding: 60px;
-       
-    }
+  /* 7 kiem tra neu checkbox duoc check hien menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
 
-     /* 7 kiem tra neu checkbox duoc check hien menu */
-     .menu-checkbox:checked ~ .menu-drawer {
-        transform: translateX(0)
-     }
+  /* 8 menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
 
-     /* 8 menu top */
-     .close__menu{
-        width: 24px;
-        color: #fff;
-     }
-     .menu-drawer__top{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-     }
-     .navbar__list{
-        margin-top: 25px;
-        flex-direction: column;
-     }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
 
-     #navbar__list--mobile{
-        margin-top: 25px;
-     }
-     .navbar__link{
-        display: block;
-        font-size: 2rem;
-     }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
 
-     .navbar__link:hover{
-        background-color: #00ffff37;
-     }
+  /* khoi hero */
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .hero__content {
+    order: 2;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__content {
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+  .hero__row {
+    justify-content: center;
+  }
 
-     /* khoi hero */
-     .hero {
-        flex-direction: column;
-        gap: 50px;
-     }
-     .hero__content {
-        order: 2;
+  /* khoi service */
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 
-     }
-     .hero__media{
-        order: 1;
-     }
-     .hero__content{
-        width: 80%;
-        text-align: center;
-        margin: 22px auto;
-     }
-     .hero__row{
-        justify-content: center;
-     }
+  .service__img {
+    width: 100%;
+  }
 
-     /* khoi service */
-     .service__row{
-        flex-direction: column;
-        row-gap: 20px;
+  .service__list {
+    text-align: center;
+  }
 
-     }
+  .service-item {
+    width: 90%;
 
-     .service__img{
-        width: 100%;
-     }
+    text-align: start;
+  }
+  /* word list */
 
-     .service__list{
-        text-align: center;
-     }
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 
-     .service-item{
-        width: 90%;
+  /* about */
 
-        text-align: start;
-     }
-     /* word list */
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 
-     .work__list{
-        grid-template-columns: 1fr;
-        row-gap: 30px;
-     }
+  .about__media {
+    width: 100%;
+  }
 
-     /* about */
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
 
-     .about-row{
-        flex-direction: column;
-        row-gap: 30px;
-     }
+  /* an anh small */
 
-     .about__media{
-        width: 100%;
-     }
+  .about__img--small {
+    display: none;
+  }
 
-     .about__img--big{
-        width: 100%;
-        border-radius: 15px;
-        margin: 25px auto;
-     }
-     .about-content{
-        width: 90%;
-        text-align: center;
+  /* team list */
 
-     }
-
-     /* an anh small */
-
-     .about__img--small{
-        display: none;
-     }
-
-
-
-
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
 
 
+  .team-item__thumb{
+   margin: 0 auto;
+  }
 
+  /* install */
 
+  .install__img{
+   display: none;
+  }
 
-
-
+  .install__content{
+   width: 90%;
+   margin: 0 auto;
+  }
 }
 
 /* tablet */
 
-@media (min-width: 768px) and (max-width:981.98px){
-
+@media (min-width: 768px) and (max-width: 981.98px) {
 }
 /* mobile */
-@media (max-width: 767.98px){
-
+@media (max-width: 767.98px) {
 }
 
 /* tam an */
- .footer,{
-    display: none;
+.footer {
+  display: none;
 }
